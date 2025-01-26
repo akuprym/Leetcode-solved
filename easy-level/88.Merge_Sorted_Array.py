@@ -11,16 +11,17 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        k = m + n -1
+        k = m + n -1 # Last index of nums1
         while m > 0 and n > 0:
-            if nums1[m-1] >= nums2[n-1]:
+            if nums1[m-1] > nums2[n-1]: # Pick larger element
                 nums1[k] = nums1[m-1]
                 m -= 1
             else:
                 nums1[k] = nums2[n-1]
                 n -= 1
-            k -= 1
+            k -= 1  # Move the pointer for nums1
 
+        # If any elements remain in nums2
         if n > 0:
             nums1[:n] = nums2[:n]
 
