@@ -42,3 +42,18 @@ class Solution:
         s = random.sample(self.nums, len(self.nums))
         return s
 
+#3
+import random
+class Solution:
+
+    def __init__(self, nums: List[int]):
+        self.arr = nums.copy()
+        self.ori = nums.copy()
+
+
+    def reset(self) -> List[int]:
+        return self.ori
+
+    def shuffle(self) -> List[int]:
+        random.shuffle(self.arr)
+        return self.arr
