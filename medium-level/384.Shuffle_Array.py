@@ -47,13 +47,12 @@ import random
 class Solution:
 
     def __init__(self, nums: List[int]):
-        self.arr = nums.copy()
-        self.ori = nums.copy()
-
+        self.nums = nums
 
     def reset(self) -> List[int]:
-        return self.ori
+        return self.nums
 
     def shuffle(self) -> List[int]:
-        random.shuffle(self.arr)
-        return self.arr
+        shuffled = self.nums[:]
+        random.shuffle(shuffled)
+        return shuffled
