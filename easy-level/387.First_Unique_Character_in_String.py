@@ -14,14 +14,14 @@ class Solution:
 # 2
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        d = {}
+        count = {}
         for i in s:
-            if i not in d:
-                d[i] = 1
+            if i not in count:
+                count[i] = 1
             else:
-                d[i] += 1
+                count[i] += 1
         for n in range(len(s)):
-            if d[s[n]] == 1:
+            if count[s[n]] == 1:
                 return n
         return -1
 

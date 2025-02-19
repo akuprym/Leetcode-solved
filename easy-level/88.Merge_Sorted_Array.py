@@ -32,7 +32,6 @@ nums1[m:] = nums2[:n]
 nums1.sort()
 
 
-
 """
 Key ideas:
 - Start filling from the end of nums1
